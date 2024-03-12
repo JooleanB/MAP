@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="520.0" prefWidth="667.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.soferi.Controller.ControllerClienti">
+    <children>
+        <VBox spacing="15.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+              AnchorPane.topAnchor="0.0">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="260.0" prefWidth="665.0">
+            <children>
+                <TableView fx:id="comandaTableView" minHeight="-Infinity" minWidth="-Infinity" prefHeight="381.0"
+                           prefWidth="331.5" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                           AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                        <TableColumn fx:id="indicativ" prefWidth="75.0" text="INDICATIV"/>
+                        <TableColumn fx:id="timp_asteptare" prefWidth="75.0" text="TIMP ASTEPTARE"/>
+                    </columns>
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+                    </columnResizePolicy>
+                </TableView>
+            </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="260.0" prefWidth="665.0">
+                <children>
+                    <VBox spacing="10">
+
+                        <TextField fx:id="adresa" prefHeight="31.0" prefWidth="138.0" promptText="ADRESA"/>
+
+                        <HBox spacing="10">
+                            <Button mnemonicParsing="false" onAction="#cauta" text="CAUTA"/>
+                            <Button mnemonicParsing="false" onAction="#accept" text="ACCEPT RIDE"/>
+                            <Button mnemonicParsing="false" onAction="#cancel" text="CANCEL RIDE"/>
+                        </HBox>
+
+                    </VBox>
+
+
+                </children>
+            </AnchorPane>
+        </VBox>
+    </children>
+</AnchorPane>
+
+
+
+

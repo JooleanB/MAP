@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.restaurant.Controller.TableController">
+    <ScrollPane fitToWidth="true" fitToHeight="true" AnchorPane.topAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+        <VBox fx:id="tablesContainer" spacing="10">
+            <!-- Dynamic tables will be added here by the controller -->
+        </VBox>
+    </ScrollPane>
+    <HBox spacing="10" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+        <Button mnemonicParsing="false" onAction="#make_an_order" text="PLACE ORDER"/>
+    </HBox>
+</AnchorPane>
+
+
+
+
+

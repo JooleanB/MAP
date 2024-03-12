@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="520.0" prefWidth="667.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lab7gui.controller.MessageController">
+    <children>
+        <VBox spacing="15.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="260.0" prefWidth="665.0">
+                <children>
+                    <TableView fx:id="messageTableView" minHeight="-Infinity" minWidth="-Infinity" prefHeight="381.0" prefWidth="331.5" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <columns>
+                            <TableColumn fx:id="messageID" prefWidth="75.0" text="ID" />
+                            <TableColumn fx:id="messageFrom" prefWidth="75.0" text="FROM" />
+                            <TableColumn fx:id="messageTo" prefWidth="75.0" text="TO" />
+                            <TableColumn fx:id="messageText" prefWidth="75.0" text="TEXT" />
+                            <TableColumn fx:id="messageDate" prefWidth="75.0" text="DATE" />
+                            <TableColumn fx:id="messageReplies" prefWidth="75.0" text="REPLIES" />
+                        </columns>
+                        <columnResizePolicy>
+                            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                        </columnResizePolicy>
+                    </TableView>
+                </children>
+            </AnchorPane>
+            <HBox alignment="CENTER" spacing="25">
+                <Button mnemonicParsing="false" onAction="#handlePreviousMessages" text="Previous"/>
+                <Button mnemonicParsing="false" onAction="#handleNextMessages" text="Next"/>
+            </HBox>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="260.0" prefWidth="665.0">
+                <children>
+                    <VBox spacing="10">
+
+                        <TextField fx:id="textFieldFrom" prefHeight="31.0" prefWidth="138.0" promptText="From" />
+                        <TextField fx:id="textFieldTo" prefHeight="31.0" prefWidth="138.0" promptText="To" />
+                        <TextField fx:id="textFieldText" prefHeight="31.0" prefWidth="138.0" promptText="Text" />
+                        <TextField fx:id="textFieldUser1" prefHeight="31.0" prefWidth="138.0" promptText="EMAIL USER1" />
+                        <TextField fx:id="textFieldUser2" prefHeight="31.0" prefWidth="138.0" promptText="EMAIL USER2" />
+
+                        <HBox spacing="10">
+                            <Button mnemonicParsing="false" onAction="#handleSave" text="ADD MESSAGE" />
+                            <Button mnemonicParsing="false" onAction="#handleSaveReply" text="REPLY MESSAGE" />
+                            <Button mnemonicParsing="false" onAction="#populate_reply" text="POPULATE" />
+                            <Button mnemonicParsing="false" onAction="#showMessagesUsers" text="MESSAGES 2 USERS" />
+                            <Button mnemonicParsing="false" onAction="#showMessages" text="SHOW ALL MESSAGES" />
+                        </HBox>
+
+                    </VBox>
+
+
+                </children>
+            </AnchorPane>
+        </VBox>
+    </children>
+</AnchorPane>
+
+
+

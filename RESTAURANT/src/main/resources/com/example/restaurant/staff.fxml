@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import java.time.LocalDateTime?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.restaurant.Controller.StaffController">
+    <VBox  spacing="10">
+        <!-- Dynamic tables will be added here by the controller -->
+    <TableView fx:id="orderTableView" AnchorPane.topAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0">
+        <columns>
+            <TableColumn fx:id="id_table" text="Table ID" prefWidth="75.0"/>
+            <TableColumn fx:id="data" text="Date" prefWidth="150.0"/>
+            <TableColumn fx:id="nume_iteme" text="Menu Items" prefWidth="275.0"/>
+        </columns>
+    </TableView>
+    <TableView fx:id="orderTableView_preparing" AnchorPane.topAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0">
+        <columns>
+            <TableColumn fx:id="id_table_preparing" text="Table ID" prefWidth="75.0"/>
+            <TableColumn fx:id="data_preparing" text="Date" prefWidth="150.0"/>
+            <TableColumn fx:id="nume_iteme_preparing" text="Menu Items" prefWidth="275.0"/>
+        </columns>
+    </TableView>
+
+        <HBox spacing="10">
+            <Button mnemonicParsing="false" onAction="#prepare" text="PREPARE ORDER"/>
+            <Button mnemonicParsing="false" onAction="#deliver" text="DELIVER ORDER"/>
+        </HBox>
+    </VBox>
+
+</AnchorPane>

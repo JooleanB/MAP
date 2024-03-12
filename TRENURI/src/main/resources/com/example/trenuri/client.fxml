@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.trenuri.Controller.Client" spacing="35">
+
+    <!-- Labels and ComboBoxes -->
+    <Label text="Departure City" />
+    <ComboBox fx:id="departureCity" />
+
+    <Label text="Destination City" />
+    <ComboBox fx:id="destinationCity" />
+
+    <Label text="Train ID" />
+    <ComboBox fx:id="trainID_combo_box" />
+
+    <CheckBox fx:id="checkBox" text="Direct Routes Only" />
+
+    <DatePicker fx:id="datePicker">
+
+    </DatePicker>
+
+    <!-- Buttons -->
+    <Button text="SHOW ROUTES" onAction="#show"/>
+    <Button text="BUY TICKET" onAction="#buy_ticket"/>
+    <Button text="SHOW MOST TICKETS SOLD" onAction="#most_tickets_sold"/>
+    <VBox spacing="150">
+    <Label fx:id="rute" text="RUTE"
+           style="-fx-font-size: 20; -fx-padding: 10;" />
+    </VBox>
+
+    <TableView fx:id="ticketTableView">
+        <columns>
+            <TableColumn fx:id="city_name_column" text="City Name" />
+            <TableColumn fx:id="trainID_column" text="Train ID" />
+            <TableColumn fx:id="no_tickets_column" text="Number of Tickets" />
+        </columns>
+    </TableView>
+
+    <Label fx:id="nr_clienti_aceeasi_ruta" text="NR CLIENTS LOOKING AT THE SAME ROUTE"/>
+
+    <!-- TableView -->
+
+</VBox>
+
